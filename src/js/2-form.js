@@ -1,3 +1,5 @@
+'use strict';
+
 const form = document.querySelector(".feedback-form");
 
 const keyForm = "feedback-form-state";
