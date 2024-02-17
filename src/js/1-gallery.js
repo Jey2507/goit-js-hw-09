@@ -88,9 +88,10 @@ const images = [
   document.querySelector(".gallery").innerHTML = imgContent;
   
   new SimpleLightbox('.gallery a', {
-    animationSpeed: 250,
+    captionDelay: 300,
     captions: true,
-    captionsData: "alt"
+    captionsData: "alt",
+    captionClass: "color-style"
 });
 
   
