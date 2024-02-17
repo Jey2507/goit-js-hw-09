@@ -98,3 +98,19 @@ a {
   text-decoration: none;
   color: #4E75FF;
 }
+
+.sl-overlay {
+  background: #2E2F42CC;
+}
+
+.sl-wrapper .sl-navigation button {
+  color: white;
+}
+
+.sl-wrapper .sl-counter  {
+  color: white;
+}
+
+.sl-wrapper .sl-close {
+  color: white;
+}
