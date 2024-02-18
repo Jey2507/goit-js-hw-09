@@ -14,12 +14,11 @@ function dataForm(form) {
     }
 }
 
-form.addEventListener("input", (event) => {
-    event.preventDefault();
+function inputFunction(event) {
     const data = dataForm(event.currentTarget);
     const jsDate = JSON.stringify(data);
     localStorage.setItem(keyForm, jsDate)
-})
+}
 
 const item = localStorage.getItem(keyForm)
 
@@ -30,8 +29,8 @@ if (item) {
 }
 
 
-form.addEventListener("submit", (event) => {
-    if (form.email.value === "" || form.message.value === "") {
+function submitFunction(event) {
+    if (form.email.value.trim() === "" || form.message.value.trim() === "") {
         alert("Будь ласка, заповніть обидва поля форми!");
         return; 
     }
@@ -41,4 +40,9 @@ form.addEventListener("submit", (event) => {
 
     localStorage.removeItem(keyForm);
     form.reset();
-})
+    
+}
+
+form.addEventListener("input", inputFunction)
+
+form.addEventListener("submit", submitFunction)
